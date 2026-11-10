@@ -1,0 +1,28 @@
+{
+  "$comment": "Lista de proyectos del portfolio, en el orden en que se muestran. 'repo' trae los datos de GitHub al compilar; 'title', 'description', 'kind', 'image', 'imageAlt', 'demo' y 'year' los sobrescriben. Las imágenes van en public/projects/. Solo repos públicos.",
+  "projects": [
+    {
+      "repo": "francoismaelraguza/DIW",
+      "title": "Viajes con Flexbox",
+      "kind": "Maquetación",
+      "description": "Web de una agencia de viajes maquetada solo con Flexbox, parte de las prácticas de Diseño de Interfaces Web."
+    },
+    {
+      "repo": "francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza",
+      "title": "Gestor de incidencias",
+      "kind": "Java",
+      "description": "Aplicación Java con Maven para registrar y resolver incidencias de un centro, documentada con Javadoc."
+    },
+    {
+      "repo": "francoismaelraguza/PortafolioWeb",
+      "title": "Este portfolio",
+      "kind": "React y Three.js",
+      "description": "El sitio que estás viendo: React, Three.js y un script que trae estos datos de GitHub en cada despliegue."
+    },
+    {
+      "repo": "francoismaelraguza/PracticaJavaScript",
+      "title": "Prácticas de JavaScript",
+      "kind": "JavaScript"
+    }
+  ]
+}

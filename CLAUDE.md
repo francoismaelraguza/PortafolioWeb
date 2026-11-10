@@ -63,3 +63,8 @@ Registro vivo. **Releer antes de empezar cada fase.** Cada entrada: qué pasó �
 6. **El contacto y los proyectos repartidos por la skill no cabían en el contenido real** (contacto sin formulario; índice para 20–40 proyectos).
    Solución: `--redraw section:contact=contact-clip-out-coupon` y `section:work=work-big-names-fixed-preview`.
    Regla: si un blueprint no puede contener el contenido real, cambiar de blueprint con `--alternatives`, no deformar el contenido.
+
+7. **Git avisaba "LF will be replaced by CRLF" en cada archivo.**
+   Causa: `core.autocrlf` de Windows sin `.gitattributes`.
+   Solución: `.gitattributes` con `* text=auto eol=lf`.
+   Regla: los archivos del repo van en LF; no cambiar la config global de git para arreglarlo.

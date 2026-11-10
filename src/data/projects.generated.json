@@ -1,0 +1,95 @@
+{
+  "projects": [
+    {
+      "id": "diw",
+      "repo": "francoismaelraguza/DIW",
+      "title": "Viajes con Flexbox",
+      "description": "Web de una agencia de viajes maquetada solo con Flexbox, parte de las prácticas de Diseño de Interfaces Web.",
+      "kind": "Maquetación",
+      "image": null,
+      "imageAlt": "",
+      "demo": null,
+      "placeholder": false,
+      "languages": [
+        {
+          "name": "HTML",
+          "share": 66
+        },
+        {
+          "name": "CSS",
+          "share": 34
+        }
+      ],
+      "topics": [],
+      "stars": 0,
+      "year": 2026,
+      "updatedAt": "2026-11-09T21:11:23Z",
+      "url": "https://github.com/francoismaelraguza/DIW"
+    },
+    {
+      "id": "documentacion-proyecto-ud1-franco-raguza",
+      "repo": "francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza",
+      "title": "Gestor de incidencias",
+      "description": "Aplicación Java con Maven para registrar y resolver incidencias de un centro, documentada con Javadoc.",
+      "kind": "Java",
+      "image": null,
+      "imageAlt": "",
+      "demo": null,
+      "placeholder": false,
+      "languages": [
+        {
+          "name": "Java",
+          "share": 100
+        }
+      ],
+      "topics": [],
+      "stars": 0,
+      "year": 2026,
+      "updatedAt": "2026-10-21T16:51:03Z",
+      "url": "https://github.com/francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza"
+    },
+    {
+      "id": "portafolioweb",
+      "repo": "francoismaelraguza/PortafolioWeb",
+      "title": "Este portfolio",
+      "description": "El sitio que estás viendo: React, Three.js y un script que trae estos datos de GitHub en cada despliegue.",
+      "kind": "React y Three.js",
+      "image": null,
+      "imageAlt": "",
+      "demo": null,
+      "placeholder": false,
+      "languages": [
+        {
+          "name": "HTML",
+          "share": 64
+        },
+        {
+          "name": "CSS",
+          "share": 36
+        }
+      ],
+      "topics": [],
+      "stars": 0,
+      "year": 2026,
+      "updatedAt": "2026-11-03T21:52:27Z",
+      "url": "https://github.com/francoismaelraguza/PortafolioWeb"
+    },
+    {
+      "id": "practicajavascript",
+      "repo": "francoismaelraguza/PracticaJavaScript",
+      "title": "Prácticas de JavaScript",
+      "description": "Ejercicios de desarrollo de JavaScript",
+      "kind": "JavaScript",
+      "image": null,
+      "imageAlt": "",
+      "demo": null,
+      "placeholder": false,
+      "languages": [],
+      "topics": [],
+      "stars": 0,
+      "year": 2026,
+      "updatedAt": "2026-06-02T23:42:06Z",
+      "url": "https://github.com/francoismaelraguza/PracticaJavaScript"
+    }
+  ]
+}

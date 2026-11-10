@@ -1,0 +1,36 @@
+/* Dos mitades iguales: cada palabra grande con su frase. La segunda baja un escalón. */
+.mission {
+  position: relative;
+  z-index: var(--z-content);
+  display: grid;
+  gap: var(--space-16);
+  padding: var(--section-gap) var(--margin);
+}
+
+.title {
+  font-size: var(--step-head);
+}
+
+.text {
+  margin-top: var(--space-6);
+  max-width: 30ch;
+  font-size: var(--step-lead);
+  line-height: 1.35;
+}
+
+@media (min-width: 900px) {
+  .mission {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+    row-gap: 0;
+  }
+
+  .block:first-child {
+    grid-column: 1 / span 5;
+  }
+
+  .block:last-child {
+    grid-column: 7 / span 6;
+    margin-top: clamp(var(--space-24), 14vw, 220px);
+  }
+}
