@@ -38,7 +38,9 @@ export function Header({ hasBackdrop }: Props) {
         </nav>
         {hasBackdrop && !reducedMotion && (
           <button type="button" className={s.link} onClick={toggleBackdropPaused}>
-            {paused ? 'Animar fondo' : 'Pausar fondo'}
+            {paused ? 'Animar' : 'Pausar'}
+            {/* En pantallas estrechas "fondo" queda solo para lectores de pantalla. */}
+            <span className={s.wide}> fondo</span>
           </button>
         )}
       </div>

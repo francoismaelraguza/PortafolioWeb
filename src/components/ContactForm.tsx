@@ -152,12 +152,9 @@ export function ContactForm() {
         {sending ? contact.sending : contact.submit}
       </Button>
 
+      {/* Región viva: anuncia el resultado del envío sin mover el foco. */}
       <div aria-live="polite">
-        {failure && (
-          <p className={s.error} role="alert">
-            {failure}
-          </p>
-        )}
+        {failure && <p className={s.error}>{failure}</p>}
         {isDemoMode && <p className={s.demo}>{contact.demoNotice}</p>}
       </div>
     </form>

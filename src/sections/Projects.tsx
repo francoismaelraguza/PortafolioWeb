@@ -42,7 +42,25 @@ export function Projects() {
   const [activeId, setActiveId] = useState(projects[0]?.id);
   const active = projects.find((project) => project.id === activeId) ?? projects[0];
 
-  if (!active) return null;
+  // Sin proyectos la sección sigue existiendo: la cabecera y el inicio enlazan con ella.
+  if (!active) {
+    return (
+      <section
+        id="proyectos"
+        className={s.projects}
+        data-chapter="bg"
+        data-shape="grid"
+        aria-labelledby="projects-title"
+      >
+        <header className={s.head}>
+          <h2 id="projects-title" className={s.title}>
+            Proyectos
+          </h2>
+          <p className={s.note}>Todavía no hay proyectos publicados. Vuelve pronto.</p>
+        </header>
+      </section>
+    );
+  }
 
   return (
     <section

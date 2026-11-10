@@ -88,8 +88,8 @@ function pairShape({ count, width, height, compact }: ShapeInput) {
         [-width * 0.46, -height * 0.32],
       ]
     : [
-        [width * 0.43, height * 0.2],
-        [-width * 0.11, -height * 0.2],
+        [width * 0.27, height * 0.24],
+        [-width * 0.27, -height * 0.26],
       ];
 
   for (let i = 0; i < count; i++) {

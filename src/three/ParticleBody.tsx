@@ -182,9 +182,17 @@ export function ParticleBody({ monogram, still }: Props) {
     };
     const observer = new ResizeObserver(measure);
     observer.observe(document.body);
-    // El ancho del nombre cambia cuando termina de cargar su tipografía.
+    // El ancho del nombre cambia cuando su tipografía sustituye a la de reserva:
+    // se observan las propias líneas y, por si acaso, los eventos de carga de fuentes.
+    document
+      .querySelectorAll('[data-hero-line], [data-hero-intro]')
+      .forEach((element) => observer.observe(element));
     document.fonts.ready.then(measure);
-    return () => observer.disconnect();
+    document.fonts.addEventListener('loadingdone', measure);
+    return () => {
+      observer.disconnect();
+      document.fonts.removeEventListener('loadingdone', measure);
+    };
   }, [invalidate]);
 
   // En modo quieto solo se dibuja cuando cambia el scroll (y una vez al entrar en él).

@@ -24,7 +24,8 @@ Portfolio personal de Franco Raguza: una sola página en español con presentaci
 
 ## Convenciones
 
-- Stack: Vite + React + TypeScript, CSS Modules, GSAP, three / @react-three/fiber / drei. No añadir frameworks CSS.
+- Stack: Vite + React + TypeScript, CSS Modules, three + @react-three/fiber. Sin GSAP ni drei: scroll y entradas con APIs nativas (`src/three/scrollStore.ts`, `src/lib/reveal.ts`). No añadir frameworks CSS ni librerías de animación sin motivo.
+- Cada sección declara `data-chapter` (`bg`, `field-1`, `field-2`) para la cabecera y `data-shape` (`fr`, `field`, `pair`, `grid`, `point`) para las partículas. Las partes que entran animadas llevan `data-reveal` dentro de un `data-reveal-group`.
 - Ningún componente usa un color, tamaño o espaciado que no sea un token de `tokens.css`.
 - Rutas de `public/` desde JS/TS: siempre `import.meta.env.BASE_URL + 'ruta'`, nunca `/ruta` (el sitio vive en `/PortafolioWeb/`).
 - Textos en español, primera persona. Sin datos personales inventados: lo que falte va como `PLACEHOLDER`.
@@ -77,3 +78,37 @@ Registro vivo. **Releer antes de empezar cada fase.** Cada entrada: qué pasó �
    Causa: las reglas del compilador de React tratan como inmutable todo valor devuelto por un hook.
    Solución: en `useFrame` leer el objeto montado desde un `ref` (`points.current.material.uniforms`) y mutar eso.
    Regla: en React Three Fiber, lo que cambia por fotograma se toca siempre a través de un `ref`, nunca a través de la variable de `useMemo`/`useState`.
+
+10. **Un `sed`/`replace` global renombró más de lo debido** (`reducedMotion` → `still`) y un segundo reemplazo cayó en la primera coincidencia equivocada, dejando una variable sin definir.
+    Regla: para cambios en un archivo, leerlo y usar ediciones exactas; los reemplazos globales por script solo para cadenas que no pueden repetirse, y siempre con `tsc` justo después.
+
+11. **Un heredoc largo de Bash con comillas y acentos falló con "unexpected EOF".**
+    Regla: los scripts de más de unas líneas se escriben a un archivo (en el scratchpad) y se ejecutan; nada de heredocs largos en línea.
+
+12. **Chrome con `--headless --screenshot --virtual-time-budget` captura la página a medio animar y antes del cambio de fuente**, y mostró un solape que no existe.
+    Regla: las capturas se hacen con `inspect.mjs` (acepta `--widths 1440,1280,1024,768,390`). No dar por real un fallo visto solo en una captura con tiempo virtual.
+
+13. **El monograma de partículas pisaba el nombre en tableta** porque su posición era un porcentaje fijo de la pantalla.
+    Solución: `src/three/heroSpace.ts` mide en el DOM el hueco libre (al lado del nombre o debajo de los botones) y se vuelve a medir con `ResizeObserver` y al cargar las fuentes.
+    Regla: lo que el 3D deba esquivar se mide en el DOM, no se estima con porcentajes.
+
+14. **Las partículas se veían más oscuras que el color del token.**
+    Causa: un `ShaderMaterial` no convierte de espacio lineal a sRGB por sí solo.
+    Solución: `#include <colorspace_fragment>` al final del fragment shader y `flat` en el `<Canvas>`.
+
+15. **En un grid, un hijo con `position: absolute` y `grid-row: 1` se colocaba respecto a todo el contenedor.**
+    Causa: para los absolutos, la línea final `auto` es el borde del contenedor.
+    Regla: indicar siempre las dos líneas (`grid-row: 1 / 2`).
+
+16. **`sharp` solo aplica el último `.resize()` encadenado**: la portada salió a 1280×800 en vez de 4:3.
+    Regla: un solo `.resize({ width, height, fit })` por imagen.
+
+17. **`lint.mjs` marca `height: 1px` de elementos ocultos como "línea fina".**
+    Regla: en utilidades solo para lectores de pantalla, añadir el comentario `taste-skill-ignore` con el motivo en esa misma línea.
+
+18. **El panel del navegador integrado, cuando está oculto, no dispara `focus`, no carga imágenes diferidas y deja el `<canvas>` en 300×150.**
+    Regla: ahí solo se comprueba DOM, consola y red (los eventos se pueden lanzar a mano con `dispatchEvent`); lo visual, con el inspector.
+
+19. **Un fondo que se mueve sin parar necesita control de pausa** (auditoría `web-design-guidelines`, WCAG 2.2.2).
+    Solución: `src/lib/backdropMotion.ts` y el botón «Pausar fondo» de la cabecera.
+    Regla: toda animación continua nueva respeta `still` (movimiento reducido o fondo en pausa).
