@@ -68,3 +68,12 @@ Registro vivo. **Releer antes de empezar cada fase.** Cada entrada: qué pasó �
    Causa: `core.autocrlf` de Windows sin `.gitattributes`.
    Solución: `.gitattributes` con `* text=auto eol=lf`.
    Regla: los archivos del repo van en LF; no cambiar la config global de git para arreglarlo.
+
+8. **Los enlaces de la cabecera fija se confundían con los títulos al pasar por debajo** (aviso del usuario): la cabecera era transparente y su texto tenía el mismo color que el contenido.
+   Solución: barra lisa y opaca que toma fondo y tinta del capítulo que tiene debajo (`useChapter` + `data-chapter` en cada sección).
+   Regla: nada fijo sobre el scroll puede ser transparente; todo elemento `position: fixed` con texto lleva fondo opaco del capítulo. Toda sección nueva declara `data-chapter` (`bg`, `field-1` o `field-2`).
+
+9. **ESLint (`react-hooks/immutability`) rechaza mutar en `useFrame` un material o geometría creados con `useMemo`.**
+   Causa: las reglas del compilador de React tratan como inmutable todo valor devuelto por un hook.
+   Solución: en `useFrame` leer el objeto montado desde un `ref` (`points.current.material.uniforms`) y mutar eso.
+   Regla: en React Three Fiber, lo que cambia por fotograma se toca siempre a través de un `ref`, nunca a través de la variable de `useMemo`/`useState`.

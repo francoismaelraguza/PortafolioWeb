@@ -1,28 +1,43 @@
 {
-  "$comment": "Lista de proyectos del portfolio, en el orden en que se muestran. 'repo' trae los datos de GitHub al compilar; 'title', 'description', 'kind', 'image', 'imageAlt', 'demo' y 'year' los sobrescriben. Las imágenes van en public/projects/. Solo repos públicos.",
+  "$comment": "Proyectos del portfolio, en el orden en que se muestran. 'repo' trae de GitHub los lenguajes, el año y la URL al compilar. Opcionales: 'id' (obligatorio si dos proyectos comparten repo), 'title', 'description', 'kind', 'path' (carpeta dentro del repo), 'image' (nombre base en public/projects/, sin extensión: hacen falta nombre.webp de 1280 px y nombre-640.webp), 'imageAlt', 'demo' y 'year'. Solo repos públicos.",
   "projects": [
     {
+      "id": "ruta-norte-bicis",
       "repo": "francoismaelraguza/DIW",
-      "title": "Viajes con Flexbox",
-      "kind": "Maquetación",
-      "description": "Web de una agencia de viajes maquetada solo con Flexbox, parte de las prácticas de Diseño de Interfaces Web."
+      "path": "Unidad 2/Tarea9",
+      "title": "Ruta Norte Bicis",
+      "kind": "Flexbox y Grid",
+      "description": "Web de una tienda de bicicletas con portada, catálogo con filtros y página de contacto, maquetada con Flexbox y CSS Grid.",
+      "image": "ruta-norte-bicis",
+      "imageAlt": "Portada de Ruta Norte Bicis: cuatro tarjetas de tipos de bicicleta y la sección de novedades."
     },
     {
+      "id": "julio-travel",
+      "repo": "francoismaelraguza/DIW",
+      "path": "Unidad 2/Tarea5/Tarea_2-5_WebFlexbox",
+      "title": "Julio Travel",
+      "kind": "Flexbox",
+      "description": "Página de una agencia de viajes con escapadas, ofertas y destinos, resuelta solo con Flexbox e ilustraciones SVG.",
+      "image": "julio-travel",
+      "imageAlt": "Portada de Julio Travel: cabecera «Reserva ya tu viaje» y tarjetas de escapadas con precio."
+    },
+    {
+      "id": "gestor-incidencias",
       "repo": "francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza",
       "title": "Gestor de incidencias",
-      "kind": "Java",
-      "description": "Aplicación Java con Maven para registrar y resolver incidencias de un centro, documentada con Javadoc."
+      "kind": "Java y Maven",
+      "description": "Aplicación Java de consola para consultar las incidencias de soporte de un centro, con Maven y documentación Javadoc.",
+      "image": "gestor-incidencias",
+      "imageAlt": "Javadoc de la clase GestorIncidencias, con sus métodos listar, buscar y buscarPorId."
     },
     {
+      "id": "este-portfolio",
       "repo": "francoismaelraguza/PortafolioWeb",
       "title": "Este portfolio",
       "kind": "React y Three.js",
-      "description": "El sitio que estás viendo: React, Three.js y un script que trae estos datos de GitHub en cada despliegue."
-    },
-    {
-      "repo": "francoismaelraguza/PracticaJavaScript",
-      "title": "Prácticas de JavaScript",
-      "kind": "JavaScript"
+      "description": "El sitio que estás viendo: React, una escena de partículas en Three.js y un script que trae estos datos de GitHub en cada despliegue.",
+      "image": "este-portfolio",
+      "imageAlt": "Inicio de este portfolio: el nombre Franco Raguza junto al monograma FR hecho de partículas."
     }
   ]
 }

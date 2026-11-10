@@ -1,4 +1,5 @@
 import { whoIAm, whoIAmClosing } from '../content/about';
+import { stagger } from '../lib/reveal';
 import s from './About.module.css';
 
 export function About() {
@@ -6,13 +7,15 @@ export function About() {
     <section
       id="sobre-mi"
       className={s.about}
-      data-header-ink="light"
+      data-chapter="bg"
+      data-shape="field"
+      data-reveal-group
       aria-labelledby="about-title"
     >
-      <h2 id="about-title" className={s.title}>
+      <h2 id="about-title" className={s.title} data-reveal>
         Quién soy
       </h2>
-      <p className={s.story}>
+      <p className={s.story} data-reveal style={stagger(1)}>
         {whoIAm.map((segment, index) => {
           if (segment.strong) return <strong key={index}>{segment.text}</strong>;
           if (segment.mark) {

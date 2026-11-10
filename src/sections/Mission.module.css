@@ -18,7 +18,7 @@
   line-height: 1.35;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .mission {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--gutter);

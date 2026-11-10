@@ -1,12 +1,13 @@
 import { navigation, site } from '../content/site';
+import { stagger } from '../lib/reveal';
 import s from './Footer.module.css';
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className={s.footer} data-header-ink="light">
-      <div className={s.columns}>
+    <footer className={s.footer} data-chapter="bg" data-shape="point" data-reveal-group>
+      <div className={s.columns} data-reveal>
         <div>
           <h2 className={s.heading}>{site.name}</h2>
           <p className={s.note}>{site.role}</p>
@@ -55,7 +56,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className={s.close}>
+      <div className={s.close} data-reveal style={stagger(2)}>
         <svg className={s.wordmark} viewBox="0 0 1000 172" role="img" aria-label={site.name}>
           <text
             x="0"

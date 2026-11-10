@@ -1,13 +1,13 @@
 {
   "projects": [
     {
-      "id": "diw",
+      "id": "ruta-norte-bicis",
       "repo": "francoismaelraguza/DIW",
-      "title": "Viajes con Flexbox",
-      "description": "Web de una agencia de viajes maquetada solo con Flexbox, parte de las prácticas de Diseño de Interfaces Web.",
-      "kind": "Maquetación",
-      "image": null,
-      "imageAlt": "",
+      "title": "Ruta Norte Bicis",
+      "description": "Web de una tienda de bicicletas con portada, catálogo con filtros y página de contacto, maquetada con Flexbox y CSS Grid.",
+      "kind": "Flexbox y Grid",
+      "image": "ruta-norte-bicis",
+      "imageAlt": "Portada de Ruta Norte Bicis: cuatro tarjetas de tipos de bicicleta y la sección de novedades.",
       "demo": null,
       "placeholder": false,
       "languages": [
@@ -24,16 +24,42 @@
       "stars": 0,
       "year": 2026,
       "updatedAt": "2026-11-09T21:11:23Z",
-      "url": "https://github.com/francoismaelraguza/DIW"
+      "url": "https://github.com/francoismaelraguza/DIW/tree/main/Unidad%202/Tarea9"
     },
     {
-      "id": "documentacion-proyecto-ud1-franco-raguza",
+      "id": "julio-travel",
+      "repo": "francoismaelraguza/DIW",
+      "title": "Julio Travel",
+      "description": "Página de una agencia de viajes con escapadas, ofertas y destinos, resuelta solo con Flexbox e ilustraciones SVG.",
+      "kind": "Flexbox",
+      "image": "julio-travel",
+      "imageAlt": "Portada de Julio Travel: cabecera «Reserva ya tu viaje» y tarjetas de escapadas con precio.",
+      "demo": null,
+      "placeholder": false,
+      "languages": [
+        {
+          "name": "HTML",
+          "share": 66
+        },
+        {
+          "name": "CSS",
+          "share": 34
+        }
+      ],
+      "topics": [],
+      "stars": 0,
+      "year": 2026,
+      "updatedAt": "2026-11-09T21:11:23Z",
+      "url": "https://github.com/francoismaelraguza/DIW/tree/main/Unidad%202/Tarea5/Tarea_2-5_WebFlexbox"
+    },
+    {
+      "id": "gestor-incidencias",
       "repo": "francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza",
       "title": "Gestor de incidencias",
-      "description": "Aplicación Java con Maven para registrar y resolver incidencias de un centro, documentada con Javadoc.",
-      "kind": "Java",
-      "image": null,
-      "imageAlt": "",
+      "description": "Aplicación Java de consola para consultar las incidencias de soporte de un centro, con Maven y documentación Javadoc.",
+      "kind": "Java y Maven",
+      "image": "gestor-incidencias",
+      "imageAlt": "Javadoc de la clase GestorIncidencias, con sus métodos listar, buscar y buscarPorId.",
       "demo": null,
       "placeholder": false,
       "languages": [
@@ -49,13 +75,13 @@
       "url": "https://github.com/francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza"
     },
     {
-      "id": "portafolioweb",
+      "id": "este-portfolio",
       "repo": "francoismaelraguza/PortafolioWeb",
       "title": "Este portfolio",
-      "description": "El sitio que estás viendo: React, Three.js y un script que trae estos datos de GitHub en cada despliegue.",
+      "description": "El sitio que estás viendo: React, una escena de partículas en Three.js y un script que trae estos datos de GitHub en cada despliegue.",
       "kind": "React y Three.js",
-      "image": null,
-      "imageAlt": "",
+      "image": "este-portfolio",
+      "imageAlt": "Inicio de este portfolio: el nombre Franco Raguza junto al monograma FR hecho de partículas.",
       "demo": null,
       "placeholder": false,
       "languages": [
@@ -73,23 +99,6 @@
       "year": 2026,
       "updatedAt": "2026-11-03T21:52:27Z",
       "url": "https://github.com/francoismaelraguza/PortafolioWeb"
-    },
-    {
-      "id": "practicajavascript",
-      "repo": "francoismaelraguza/PracticaJavaScript",
-      "title": "Prácticas de JavaScript",
-      "description": "Ejercicios de desarrollo de JavaScript",
-      "kind": "JavaScript",
-      "image": null,
-      "imageAlt": "",
-      "demo": null,
-      "placeholder": false,
-      "languages": [],
-      "topics": [],
-      "stars": 0,
-      "year": 2026,
-      "updatedAt": "2026-06-02T23:42:06Z",
-      "url": "https://github.com/francoismaelraguza/PracticaJavaScript"
     }
   ]
 }

@@ -62,7 +62,7 @@ function slug(text) {
 }
 
 async function buildProject(entry, previous) {
-  const id = slug(entry.repo ? entry.repo.split('/')[1] : entry.title);
+  const id = entry.id ?? slug(entry.repo ? entry.repo.split('/')[1] : entry.title);
   const base = {
     id,
     repo: entry.repo ?? null,
@@ -78,7 +78,7 @@ async function buildProject(entry, previous) {
     stars: 0,
     year: entry.year ?? null,
     updatedAt: null,
-    url: entry.repo ? `https://github.com/${entry.repo}` : null,
+    url: entry.repo ? repoUrl(`https://github.com/${entry.repo}`, entry.path) : null,
   };
 
   if (!entry.repo) return base;
@@ -103,14 +103,22 @@ async function buildProject(entry, previous) {
       stars: repo.stargazers_count ?? 0,
       year: entry.year ?? new Date(repo.pushed_at).getFullYear(),
       updatedAt: repo.pushed_at,
-      url: repo.html_url,
+      url: repoUrl(repo.html_url, entry.path, repo.default_branch),
     };
   } catch (error) {
     const cached = previous.find((project) => project.id === id);
-    console.warn(`  ! ${entry.repo}: ${error.message}. ${cached ? 'Se usan los datos anteriores.' : 'Se usan solo los datos de la config.'}`);
+    console.warn(
+      `  ! ${entry.repo}: ${error.message}. ${cached ? 'Se usan los datos anteriores.' : 'Se usan solo los datos de la config.'}`,
+    );
     // Lo escrito a mano en la config manda también sobre los datos en caché.
     return cached ? { ...cached, ...stripEmpty(base), languages: cached.languages } : base;
   }
+}
+
+/** Enlace al repo o, si hay `path`, a esa carpeta dentro de él. */
+function repoUrl(base, path, branch = 'main') {
+  if (!path) return base;
+  return `${base}/tree/${branch}/${path.split('/').map(encodeURIComponent).join('/')}`;
 }
 
 function stripEmpty(object) {

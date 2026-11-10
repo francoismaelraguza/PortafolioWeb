@@ -5,28 +5,28 @@
 :root {
   color-scheme: dark;
 
-  /* Color · "Hollín y lima" */
-  --bg: #0f0f0f;
-  --surface: #1a1a1a;
-  --ink: #ffffff;
-  --muted: #8f8f8f;
-  --accent: #dafa9c;
-  --accent-ink: #0f0f0f;
+  /* Color · "Noche y aciano" */
+  --bg: #0a0d14;
+  --surface: #131824;
+  --ink: #e9edf3;
+  --muted: #8891a1;
+  --accent: #5a9bfc;
+  --accent-ink: #0a0d14;
   /* Campos: secciones que cambian todo el fondo */
-  --field-1: #ffffff;
-  --field-1-ink: #0f0f0f;
-  --field-2: #dafa9c;
-  --field-2-ink: #0f0f0f;
+  --field-1: #e9edf3;
+  --field-1-ink: #0a0d14;
+  --field-2: #5a9bfc;
+  --field-2-ink: #0a0d14;
   /* Texto secundario sobre campos claros (≥ 4.5:1 sobre ambos campos) */
-  --field-muted: #4d4d4d;
-  --error: #ff8f7a;
+  --field-muted: #2b3342;
+  --error: #ff9d8a;
 
   /* Tipografía */
-  --font-display: 'Anton', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
-  --font-text: 'Work Sans Variable', 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
-  --display-tracking: -0.01em;
-  --display-leading: 0.86;
-  --display-weight: 400;
+  --font-display: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+  --font-text: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
+  --display-tracking: -0.015em;
+  --display-leading: 0.84;
+  --display-weight: 700;
 
   /* Cinco tamaños, lejos unos de otros */
   --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
@@ -34,7 +34,7 @@
   --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
   --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
   /* El nombre del hero llena su medida: lo limita el ancho en móvil y el alto en escritorio */
-  --step-display: clamp(5rem, min(33vw, 31svh), 20rem);
+  --step-display: clamp(5rem, min(34vw, 33svh), 21rem);
 
   /* Espacio: escala de 4 px */
   --space-1: 4px;
@@ -53,41 +53,20 @@
   /* Forma: esquinas rectas en toda la página */
   --radius: 0px;
   --control-height: 52px;
+  --header-height: 60px;
 
   /* Movimiento */
   --dur-fast: 150ms;
   --dur-base: 300ms;
   --dur-slow: 600ms;
+  --dur-reveal: 900ms;
+  --stagger: 80ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Capas */
   --z-canvas: 0;
   --z-content: 1;
   --z-header: 10;
-}
-
-/*
- * Variante B (solo para comparar): "Noche y aciano" con Barlow Condensed / Barlow.
- * Se elimina cuando se elija variante.
- */
-:root[data-variant='b'] {
-  --bg: #0a0d14;
-  --surface: #131824;
-  --ink: #e9edf3;
-  --muted: #8891a1;
-  --accent: #5a9bfc;
-  --accent-ink: #0a0d14;
-  --field-1: #e9edf3;
-  --field-1-ink: #0a0d14;
-  --field-2: #5a9bfc;
-  --field-2-ink: #0a0d14;
-  --field-muted: #2b3342;
-
-  --font-display: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
-  --font-text: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
-  --display-tracking: -0.015em;
-  --display-leading: 0.84;
-  --display-weight: 700;
-  --step-display: clamp(5rem, min(34vw, 33svh), 21rem);
 }

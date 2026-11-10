@@ -13,13 +13,15 @@
 
 .name {
   font-size: var(--step-display);
-  /* Las mayúsculas grandes parecen sangradas: alineación óptica con el texto de abajo */
-  margin-inline-start: -0.035em;
+  /* Alineación óptica: la F grande trae aire a su izquierda y parecería sangrada. */
+  margin-inline-start: -0.04em;
 }
 
 .first,
 .last {
   display: block;
+  /* Ancho del texto, no de la línea: de aquí se mide el hueco para el monograma. */
+  width: fit-content;
 }
 
 .last {
@@ -63,5 +65,24 @@
 @media (max-width: 767px) {
   .hero {
     padding-top: max(13svh, 84px);
+  }
+}
+
+/* Secuencia de carga: nombre, apellido y frase suben escalonados. Solo CSS, sin script. */
+.enter {
+  animation: enter var(--dur-reveal) var(--ease-expo) both;
+  animation-delay: calc(var(--i, 0) * var(--stagger) + 80ms);
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.18em);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter {
+    animation: none;
   }
 }
