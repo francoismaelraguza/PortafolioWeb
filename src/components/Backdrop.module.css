@@ -1,0 +1,7 @@
+/* El lienzo queda fijo detrás del contenido y no recibe eventos. */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-canvas);
+  pointer-events: none;
+}

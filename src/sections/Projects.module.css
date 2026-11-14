@@ -1,0 +1,173 @@
+/*
+ * Los nombres son el índice. En escritorio, una vista previa fija a la derecha
+ * cambia con el nombre activo; en móvil cada proyecto lleva su imagen delante.
+ */
+.projects {
+  position: relative;
+  z-index: var(--z-content);
+  display: grid;
+  gap: var(--space-12);
+  padding: var(--section-gap) var(--margin);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-8);
+}
+
+.title {
+  font-size: var(--step-lead);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.note {
+  color: var(--muted);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.row {
+  display: block;
+  padding-block: var(--space-3);
+  text-decoration: none;
+}
+
+.name {
+  font-size: var(--step-head);
+  line-height: 0.92;
+  overflow-wrap: break-word;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.meta {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--muted);
+}
+
+.row:active .name {
+  color: var(--accent);
+}
+
+.inlinePicture {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: var(--space-4);
+}
+
+.inlineDetail {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 62ch;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-6);
+  font-weight: 600;
+}
+
+.share {
+  color: var(--muted);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+.preview {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .projects {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+    row-gap: var(--space-12);
+    align-items: start;
+  }
+
+  .head {
+    grid-column: 1 / -1;
+  }
+
+  .list {
+    grid-column: 1 / span 7;
+    gap: 0;
+  }
+
+  .row {
+    display: grid;
+    gap: var(--space-2);
+    padding-block: var(--space-4);
+  }
+
+  /* El activo va en tinta plena; el resto, en gris a contraste completo. */
+  .name {
+    color: var(--muted);
+  }
+
+  .item[data-active='true'] .name {
+    color: var(--ink);
+  }
+
+  .meta {
+    margin-top: 0;
+  }
+
+  .inlinePicture {
+    display: none;
+  }
+
+  /* Visible solo para lectores de pantalla: el panel fijo ya lo muestra. */
+  .inlineDetail {
+    position: absolute;
+    width: 1px;
+    height: 1px; /* taste-skill-ignore: texto solo para lectores de pantalla */
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .preview {
+    grid-column: 8 / span 5;
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-8));
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .frame {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .framePicture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0;
+    transition: opacity 200ms var(--ease-out);
+  }
+
+  .frameActive {
+    opacity: 1;
+  }
+
+  .previewText {
+    max-width: 46ch;
+  }
+}

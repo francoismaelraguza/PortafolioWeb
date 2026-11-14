@@ -1,0 +1,72 @@
+/*
+ * Design tokens: la fuente de verdad del manual de diseño (docs/manual-de-diseno.md).
+ * Ningún componente usa un color, tamaño de letra o espaciado que no salga de aquí.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Color · "Noche y aciano" */
+  --bg: #0a0d14;
+  --surface: #131824;
+  --ink: #e9edf3;
+  --muted: #8891a1;
+  --accent: #5a9bfc;
+  --accent-ink: #0a0d14;
+  /* Campos: secciones que cambian todo el fondo */
+  --field-1: #e9edf3;
+  --field-1-ink: #0a0d14;
+  --field-2: #5a9bfc;
+  --field-2-ink: #0a0d14;
+  /* Texto secundario sobre campos claros (≥ 4.5:1 sobre ambos campos) */
+  --field-muted: #2b3342;
+  --error: #ff9d8a;
+
+  /* Tipografía */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+  --font-text: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
+  --display-tracking: -0.015em;
+  --display-leading: 0.84;
+  --display-weight: 700;
+
+  /* Cinco tamaños, lejos unos de otros */
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+  /* El nombre del hero llena su medida: lo limita el ancho en móvil y el alto en escritorio */
+  --step-display: clamp(5rem, min(34vw, 33svh), 21rem);
+
+  /* Espacio: escala de 4 px */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --margin: clamp(16px, 3vw, 44px);
+  --gutter: clamp(12px, 1.6vw, 24px);
+  --section-gap: clamp(88px, 12vw, 200px);
+
+  /* Forma: esquinas rectas en toda la página */
+  --radius: 0px;
+  --control-height: 52px;
+  --header-height: 60px;
+
+  /* Movimiento */
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-slow: 600ms;
+  --dur-reveal: 900ms;
+  --stagger: 80ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Capas */
+  --z-canvas: 0;
+  --z-content: 1;
+  --z-header: 10;
+}

@@ -1,0 +1,94 @@
+/*
+ * Barra lisa y opaca: toma el fondo y la tinta del capítulo que pasa por debajo,
+ * así el contenido se desliza por detrás sin mezclarse nunca con los enlaces.
+ */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--z-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--header-height);
+  padding: 0 var(--margin);
+  background: var(--bg);
+  color: var(--ink);
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+.header[data-on='field-1'] {
+  background: var(--field-1);
+  color: var(--field-1-ink);
+  --focus: var(--field-1-ink);
+}
+
+.header[data-on='field-2'] {
+  background: var(--field-2);
+  color: var(--field-2-ink);
+  --focus: var(--field-2-ink);
+}
+
+.end,
+.links {
+  display: flex;
+  align-items: center;
+  gap: clamp(var(--space-3), 2.4vw, var(--space-8));
+}
+
+.mark,
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+.mark {
+  font-size: var(--step-lead);
+  line-height: 1;
+  padding-inline: var(--space-1);
+  margin-inline-start: calc(var(--space-1) * -1);
+}
+
+.link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-size: var(--step-small);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:active,
+.mark:active {
+  opacity: 0.7;
+}
+
+.wide {
+  white-space: pre;
+}
+
+@media (max-width: 479px) {
+  .wide {
+    position: absolute;
+    width: 1px;
+    height: 1px; /* taste-skill-ignore: texto solo para lectores de pantalla */
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .link {
+    font-size: var(--step-body);
+  }
+}

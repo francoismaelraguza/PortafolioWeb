@@ -1,0 +1,88 @@
+/*
+ * Primer pantallazo: solo el nombre, dos tintas, y la frase que dice qué hace.
+ * La mitad derecha (o el tercio inferior en móvil) la ocupa el monograma de partículas.
+ */
+.hero {
+  position: relative;
+  z-index: var(--z-content);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding: max(15svh, 88px) var(--margin) var(--space-12);
+}
+
+.name {
+  font-size: var(--step-display);
+  /* Alineación óptica: la F grande trae aire a su izquierda y parecería sangrada. */
+  margin-inline-start: -0.04em;
+}
+
+.first,
+.last {
+  display: block;
+  /* Ancho del texto, no de la línea: de aquí se mide el hueco para el monograma. */
+  width: fit-content;
+}
+
+.last {
+  color: var(--accent);
+}
+
+.intro {
+  margin-top: clamp(var(--space-6), 4svh, var(--space-12));
+  max-width: 34rem;
+}
+
+.tagline {
+  font-size: var(--step-lead);
+  line-height: 1.35;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+}
+
+.secondary:hover {
+  color: var(--accent);
+}
+
+.secondary:active {
+  opacity: 0.7;
+}
+
+/* En móvil el nombre sube para dejar el tercio inferior al monograma */
+@media (max-width: 767px) {
+  .hero {
+    padding-top: max(13svh, 84px);
+  }
+}
+
+/* Secuencia de carga: nombre, apellido y frase suben escalonados. Solo CSS, sin script. */
+.enter {
+  animation: enter var(--dur-reveal) var(--ease-expo) both;
+  animation-delay: calc(var(--i, 0) * var(--stagger) + 80ms);
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.18em);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter {
+    animation: none;
+  }
+}

@@ -1,0 +1,71 @@
+/* Cierre diseñado: columnas arriba, el nombre de margen a margen abajo. */
+.footer {
+  position: relative;
+  z-index: var(--z-content);
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: var(--space-12) var(--margin) var(--space-6);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8) var(--gutter);
+}
+
+.heading {
+  font-size: var(--step-body);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.note {
+  color: var(--muted);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  color: var(--muted);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.link:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.link:active {
+  color: var(--accent);
+}
+
+.close {
+  grid-row: 3;
+}
+
+.wordmark {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.wordmarkText {
+  font-size: 196px;
+  fill: var(--ink);
+}
+
+.legal {
+  margin-top: var(--space-4);
+  font-size: var(--step-small);
+  color: var(--muted);
+}
+
+@media (min-width: 900px) {
+  .columns {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

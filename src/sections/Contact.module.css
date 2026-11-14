@@ -1,0 +1,134 @@
+/* Campo claro con un cupón oscuro: el formulario se "recorta" por la línea de puntos. */
+.contact {
+  position: relative;
+  z-index: var(--z-content);
+  padding: var(--section-gap) var(--margin);
+}
+
+.coupon {
+  --notch: 28px;
+  --perforation: 5px;
+  position: relative;
+  display: grid;
+  background: var(--bg);
+  color: var(--ink);
+  /* Dentro del cupón el foco vuelve a ser el acento. */
+  --focus: var(--accent);
+  overflow: hidden;
+}
+
+/* Las muescas son dos círculos del color del campo que muerden los bordes. */
+.coupon::before,
+.coupon::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: var(--notch);
+  height: var(--notch);
+  border-radius: 50%;
+  background: var(--field-1);
+}
+
+.stub,
+.body {
+  padding: var(--space-8) var(--space-6);
+}
+
+.stub {
+  display: grid;
+  gap: var(--space-8);
+  align-content: space-between;
+  /* La perforación: una fila de puntos gruesos del color del campo. */
+  border-bottom: var(--perforation) dotted var(--field-1);
+}
+
+.title {
+  /* Algo menor que --step-head para que quepa en dos líneas dentro del talón. */
+  font-size: clamp(2.5rem, 4.4vw, 5.5rem);
+}
+
+.aside {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 36ch;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-6);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.link:active {
+  opacity: 0.7;
+}
+
+/*
+ * Móvil: cupón vertical, perforación horizontal, muescas a izquierda y derecha.
+ * Las muescas se colocan en la fila del talón (grid-row: 1) y cuelgan de su borde inferior.
+ */
+.coupon::before,
+.coupon::after {
+  grid-row: 1 / 2;
+  bottom: calc(var(--notch) / -2 - var(--perforation) / 2);
+}
+
+.coupon::before {
+  left: calc(var(--notch) / -2);
+}
+
+.coupon::after {
+  right: calc(var(--notch) / -2);
+}
+
+@media (min-width: 900px) {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+  }
+
+  .coupon {
+    grid-column: 2 / span 10;
+    grid-template-columns: 46fr 54fr;
+  }
+
+  .stub,
+  .body {
+    padding: var(--space-12);
+  }
+
+  .stub {
+    border-bottom: 0;
+    border-right: var(--perforation) dotted var(--field-1);
+  }
+
+  .coupon::before,
+  .coupon::after {
+    grid-row: auto;
+    left: 46%;
+    right: auto;
+    translate: -50% 0;
+  }
+
+  .coupon::before {
+    top: calc(var(--notch) / -2);
+    bottom: auto;
+  }
+
+  .coupon::after {
+    bottom: calc(var(--notch) / -2);
+  }
+}
