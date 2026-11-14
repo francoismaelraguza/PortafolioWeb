@@ -1,6 +1,6 @@
 # PortafolioWeb
 
-Portfolio personal de Franco Raguza: una página con presentación, proyectos de GitHub y contacto, sobre una escena de partículas en Three.js que cambia de forma al hacer scroll.
+Portafolio personal de Franco Raguza: una página con presentación, proyectos de GitHub y contacto, sobre una escena de partículas en Three.js que cambia de forma al hacer scroll.
 
 **Sitio:** https://francoismaelraguza.github.io/PortafolioWeb/
 
@@ -26,7 +26,7 @@ npm run dev
 
 El sitio queda en `http://localhost:5173/PortafolioWeb/`.
 
-Para que el formulario envíe mensajes en local, copia `.env.example` como `.env.local` y pon tu access key de Web3Forms. Sin ella funciona en modo demostración.
+Para que el formulario envíe mensajes en local, crea un archivo `.env.local` en la raíz con una línea `VITE_WEB3FORMS_KEY=` seguida de tu access key de Web3Forms. Sin ella funciona en modo demostración.
 
 ## Comandos
 

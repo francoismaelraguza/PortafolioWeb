@@ -1,18 +1,14 @@
 # Mantenimiento
 
-Guía práctica para mantener el portfolio al día. Para el porqué del diseño, ver el [manual de diseño](manual-de-diseno.md).
+Guía práctica para mantener el portafolio al día. Para el porqué del diseño, ver el [manual de diseño](manual-de-diseno.md).
 
-## Pendientes antes de dar el sitio por «real»
+## Pendientes antes de publicar
 
-Busca `PLACEHOLDER` en `src/content/` para encontrarlos todos.
+Los textos, el correo y el enlace de LinkedIn ya son los definitivos.
 
-- [ ] **Textos de presentación** — `src/content/about.ts`: quién soy, qué me distingue, misión y visión.
-- [ ] **Frase del inicio** — `src/content/site.ts` (`tagline`).
-- [ ] **Correo de contacto** — `src/content/site.ts` (`links.email`, ahora `hola@example.com`).
-- [ ] **LinkedIn** — `src/content/site.ts` (`links.linkedin`, ahora la portada de LinkedIn).
-- [ ] **Plazo de respuesta** — `src/content/contact.ts` (`note`).
-- [ ] **Descripciones de los proyectos** — `projects.config.json`: están escritas a partir de lo que hay en cada repo; revísalas.
-- [ ] **Prueba real del formulario** en el sitio publicado.
+- [ ] **Variable del formulario en GitHub** — crear `VITE_WEB3FORMS_KEY` en el repo (ver «Formulario de contacto»). Sin ella, el sitio publicado queda en modo demostración.
+- [ ] **Descripciones de los proyectos** — `projects.config.json`: están escritas a partir de lo que hay en cada repo; conviene que las revise Franco.
+- [ ] **Prueba real del formulario**, primero en local y después en el sitio publicado.
 
 ## Tareas habituales
 
@@ -20,7 +16,9 @@ Busca `PLACEHOLDER` en `src/content/` para encontrarlos todos.
 
 Todo el texto vive en `src/content/*.ts`. Edita, guarda y haz push a `main`: el sitio se vuelve a publicar solo.
 
-Límites que el diseño necesita: ningún título de más de dos líneas (unos 32 caracteres); «Quién soy» entre 110 y 160 palabras; misión y visión, una frase de 20–30 palabras cada una.
+Límites que el diseño necesita: ningún título de más de dos líneas (unos 32 caracteres); «Quién soy» entre 90 y 160 palabras; misión y visión, 20–30 palabras cada una.
+
+Los textos van en español rioplatense: lo que se dirige a quien visita el sitio usa el voseo («escribime», «podés», «contame»). En «Quién soy», los espacios y la puntuación van siempre fuera de los tramos resaltados.
 
 ### Añadir un proyecto
 

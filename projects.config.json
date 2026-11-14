@@ -1,5 +1,5 @@
 {
-  "$comment": "Proyectos del portfolio, en el orden en que se muestran. 'repo' trae de GitHub los lenguajes, el año y la URL al compilar. Opcionales: 'id' (obligatorio si dos proyectos comparten repo), 'title', 'description', 'kind', 'path' (carpeta dentro del repo), 'image' (nombre base en public/projects/, sin extensión: hacen falta nombre.webp de 1280 px y nombre-640.webp), 'imageAlt', 'demo' y 'year'. Solo repos públicos.",
+  "$comment": "Proyectos del portafolio, en el orden en que se muestran. 'repo' trae de GitHub los lenguajes, el año y la URL al compilar. Opcionales: 'id' (obligatorio si dos proyectos comparten repo), 'title', 'description', 'kind', 'path' (carpeta dentro del repo), 'image' (nombre base en public/projects/, sin extensión: hacen falta nombre.webp de 1280 px y nombre-640.webp), 'imageAlt', 'demo' y 'year'. Solo repos públicos.",
   "projects": [
     {
       "id": "ruta-norte-bicis",
@@ -33,11 +33,11 @@
     {
       "id": "este-portfolio",
       "repo": "francoismaelraguza/PortafolioWeb",
-      "title": "Este portfolio",
+      "title": "Este portafolio",
       "kind": "React y Three.js",
       "description": "El sitio que estás viendo: React, una escena de partículas en Three.js y un script que trae estos datos de GitHub en cada despliegue.",
       "image": "este-portfolio",
-      "imageAlt": "Inicio de este portfolio: el nombre Franco Raguza junto al monograma FR hecho de partículas."
+      "imageAlt": "Inicio de este portafolio: el nombre Franco Raguza junto al monograma FR hecho de partículas."
     }
   ]
 }

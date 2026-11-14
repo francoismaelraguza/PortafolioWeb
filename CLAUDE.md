@@ -1,6 +1,6 @@
 # PortafolioWeb
 
-Portfolio personal de Franco Raguza: una sola página en español con presentación, proyectos de GitHub y contacto, y una escena Three.js que reacciona al scroll. Se publica en GitHub Pages (`https://francoismaelraguza.github.io/PortafolioWeb/`).
+Portafolio personal de Franco Raguza: una sola página en español con presentación, proyectos de GitHub y contacto, y una escena Three.js que reacciona al scroll. Se publica en GitHub Pages (`https://francoismaelraguza.github.io/PortafolioWeb/`).
 
 ## Comandos
 
@@ -16,7 +16,7 @@ Portfolio personal de Franco Raguza: una sola página en español con presentaci
 ## Estructura
 
 - `src/styles/tokens.css` — design tokens; **fuente de verdad** del manual (`docs/manual-de-diseno.md`).
-- `src/content/*.ts` — todos los textos. Lo marcado `PLACEHOLDER` es provisional.
+- `src/content/*.ts` — todos los textos, ya definitivos (escritos por Franco).
 - `src/sections/` — una sección por archivo (`.tsx` + `.module.css`). `src/components/` — piezas compartidas.
 - `src/three/` — escena React Three Fiber. `src/hooks/`, `src/lib/` — utilidades.
 - `projects.config.json` + `scripts/fetch-projects.mjs` — lista de repos y script que trae sus datos al compilar.
@@ -28,7 +28,8 @@ Portfolio personal de Franco Raguza: una sola página en español con presentaci
 - Cada sección declara `data-chapter` (`bg`, `field-1`, `field-2`) para la cabecera y `data-shape` (`fr`, `field`, `pair`, `grid`, `point`) para las partículas. Las partes que entran animadas llevan `data-reveal` dentro de un `data-reveal-group`.
 - Ningún componente usa un color, tamaño o espaciado que no sea un token de `tokens.css`.
 - Rutas de `public/` desde JS/TS: siempre `import.meta.env.BASE_URL + 'ruta'`, nunca `/ruta` (el sitio vive en `/PortafolioWeb/`).
-- Textos en español, primera persona. Sin datos personales inventados: lo que falte va como `PLACEHOLDER`.
+- Textos en español rioplatense, primera persona. Franco es argentino: lo que se dirige a quien visita el sitio va en **voseo** («escribime», «podés», «contame», «intentalo»); el voseo no es una errata y no se «corrige» a tú. Se dice «portafolio», no «portfolio». Sin datos personales inventados.
+- Al corregir textos de Franco: arreglar ortografía, tildes y puntuación, pero conservar sus palabras; avisar de cualquier cambio que no sea puramente ortográfico.
 - Commits locales por hito en la rama de trabajo. **Push y PR solo con permiso explícito.**
 
 ## Diseño: skills obligatorias

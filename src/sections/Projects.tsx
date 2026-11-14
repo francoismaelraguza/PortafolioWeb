@@ -56,7 +56,7 @@ export function Projects() {
           <h2 id="projects-title" className={s.title}>
             Proyectos
           </h2>
-          <p className={s.note}>Todavía no hay proyectos publicados. Vuelve pronto.</p>
+          <p className={s.note}>Todavía no hay proyectos publicados. Volvé pronto.</p>
         </header>
       </section>
     );

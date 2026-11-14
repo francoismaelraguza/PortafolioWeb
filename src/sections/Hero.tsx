@@ -25,7 +25,7 @@ export function Hero() {
         <div className={s.actions}>
           <Button href="#proyectos">Ver proyectos</Button>
           <a className={s.secondary} href="#contacto">
-            Escríbeme
+            Escribime
           </a>
         </div>
       </div>

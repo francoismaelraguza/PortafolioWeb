@@ -16,7 +16,6 @@ export interface Project {
   image: string | null;
   imageAlt: string;
   demo: string | null;
-  placeholder: boolean;
   languages: ProjectLanguage[];
   topics: string[];
   stars: number;

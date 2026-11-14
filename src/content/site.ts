@@ -1,7 +1,4 @@
-/*
- * Datos generales del sitio. Todo lo marcado como PLACEHOLDER hay que
- * sustituirlo por los datos reales antes de dar el sitio por terminado.
- */
+/* Datos generales del sitio: nombre, frase del inicio y enlaces. */
 
 export const site = {
   name: 'Franco Raguza',
@@ -9,17 +6,14 @@ export const site = {
   lastName: 'Raguza',
   monogram: 'FR',
   role: 'Desarrollador web',
-  // PLACEHOLDER: frase de presentación del hero (máx. ~22 palabras).
-  tagline:
-    'Desarrollador web. Construyo interfaces claras y el código que las sostiene, de HTML y CSS a JavaScript y Java.',
+  /** Frase de presentación del inicio (máx. ~22 palabras). */
+  tagline: 'Estudiante de desarrollo web. Creativo en el frontend y sólido en el backend.',
   githubUser: 'francoismaelraguza',
   repoUrl: 'https://github.com/francoismaelraguza/PortafolioWeb',
   links: {
     github: 'https://github.com/francoismaelraguza',
-    // PLACEHOLDER: URL real del perfil de LinkedIn.
-    linkedin: 'https://www.linkedin.com/',
-    // PLACEHOLDER: correo público de contacto.
-    email: 'hola@example.com',
+    linkedin: 'https://www.linkedin.com/in/franco-ismael-raguza-79b1a6397/',
+    email: 'francoismaelraguza@gmail.com',
   },
 } as const;
 

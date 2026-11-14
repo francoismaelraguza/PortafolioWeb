@@ -32,8 +32,8 @@ export async function sendMessage(message: ContactMessage): Promise<SendResult> 
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         access_key: ACCESS_KEY,
-        subject: `Mensaje de ${message.name} desde el portfolio`,
-        from_name: `Portfolio de ${site.name}`,
+        subject: `Mensaje de ${message.name} desde el portafolio`,
+        from_name: `Portafolio de ${site.name}`,
         name: message.name,
         email: message.email,
         message: message.message,

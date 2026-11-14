@@ -4,6 +4,8 @@ import s from './Footer.module.css';
 
 export function Footer() {
   const year = new Date().getFullYear();
+  // Si el correo no cabe en la columna, se parte justo después de la arroba.
+  const [emailUser, emailDomain] = site.links.email.split('@');
 
   return (
     <footer className={s.footer} data-chapter="bg" data-shape="point" data-reveal-group>
@@ -43,8 +45,11 @@ export function Footer() {
           <h2 className={s.heading}>Contacto</h2>
           <ul>
             <li>
-              <a className={s.link} href={`mailto:${site.links.email}`}>
-                {site.links.email}
+              <a className={s.link} href={`mailto:${site.links.email}`} translate="no">
+                <span>
+                  {emailUser}@<wbr />
+                  {emailDomain}
+                </span>
               </a>
             </li>
             <li>

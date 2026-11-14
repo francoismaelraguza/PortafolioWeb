@@ -72,7 +72,6 @@ async function buildProject(entry, previous) {
     image: entry.image ?? null,
     imageAlt: entry.imageAlt ?? '',
     demo: entry.demo ?? null,
-    placeholder: Boolean(entry.placeholder),
     languages: (entry.languages ?? []).map((name) => ({ name, share: 0 })),
     topics: [],
     stars: 0,

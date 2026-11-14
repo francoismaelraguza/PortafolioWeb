@@ -9,21 +9,20 @@
       "image": "ruta-norte-bicis",
       "imageAlt": "Portada de Ruta Norte Bicis: cuatro tarjetas de tipos de bicicleta y la sección de novedades.",
       "demo": null,
-      "placeholder": false,
       "languages": [
         {
           "name": "HTML",
-          "share": 66
+          "share": 65
         },
         {
           "name": "CSS",
-          "share": 34
+          "share": 35
         }
       ],
       "topics": [],
       "stars": 0,
       "year": 2026,
-      "updatedAt": "2026-11-09T21:11:23Z",
+      "updatedAt": "2026-11-12T17:49:27Z",
       "url": "https://github.com/francoismaelraguza/DIW/tree/main/Unidad%202/Tarea9"
     },
     {
@@ -35,21 +34,20 @@
       "image": "julio-travel",
       "imageAlt": "Portada de Julio Travel: cabecera «Reserva ya tu viaje» y tarjetas de escapadas con precio.",
       "demo": null,
-      "placeholder": false,
       "languages": [
         {
           "name": "HTML",
-          "share": 66
+          "share": 65
         },
         {
           "name": "CSS",
-          "share": 34
+          "share": 35
         }
       ],
       "topics": [],
       "stars": 0,
       "year": 2026,
-      "updatedAt": "2026-11-09T21:11:23Z",
+      "updatedAt": "2026-11-12T17:49:27Z",
       "url": "https://github.com/francoismaelraguza/DIW/tree/main/Unidad%202/Tarea5/Tarea_2-5_WebFlexbox"
     },
     {
@@ -61,7 +59,6 @@
       "image": "gestor-incidencias",
       "imageAlt": "Javadoc de la clase GestorIncidencias, con sus métodos listar, buscar y buscarPorId.",
       "demo": null,
-      "placeholder": false,
       "languages": [
         {
           "name": "Java",
@@ -77,13 +74,12 @@
     {
       "id": "este-portfolio",
       "repo": "francoismaelraguza/PortafolioWeb",
-      "title": "Este portfolio",
+      "title": "Este portafolio",
       "description": "El sitio que estás viendo: React, una escena de partículas en Three.js y un script que trae estos datos de GitHub en cada despliegue.",
       "kind": "React y Three.js",
       "image": "este-portfolio",
-      "imageAlt": "Inicio de este portfolio: el nombre Franco Raguza junto al monograma FR hecho de partículas.",
+      "imageAlt": "Inicio de este portafolio: el nombre Franco Raguza junto al monograma FR hecho de partículas.",
       "demo": null,
-      "placeholder": false,
       "languages": [
         {
           "name": "HTML",
@@ -95,7 +91,7 @@
         }
       ],
       "topics": [],
-      "stars": 0,
+      "stars": 1,
       "year": 2026,
       "updatedAt": "2026-11-03T21:52:27Z",
       "url": "https://github.com/francoismaelraguza/PortafolioWeb"
