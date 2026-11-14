@@ -1,0 +1,43 @@
+{
+  "$comment": "Proyectos del portafolio, en el orden en que se muestran. 'repo' trae de GitHub los lenguajes, el año y la URL al compilar. Opcionales: 'id' (obligatorio si dos proyectos comparten repo), 'title', 'description', 'kind', 'path' (carpeta dentro del repo), 'image' (nombre base en public/projects/, sin extensión: hacen falta nombre.webp de 1280 px y nombre-640.webp), 'imageAlt', 'demo' y 'year'. Solo repos públicos.",
+  "projects": [
+    {
+      "id": "ruta-norte-bicis",
+      "repo": "francoismaelraguza/DIW",
+      "path": "Unidad 2/Tarea9",
+      "title": "Ruta Norte Bicis",
+      "kind": "Flexbox y Grid",
+      "description": "Web de una tienda de bicicletas con portada, catálogo con filtros y página de contacto, maquetada con Flexbox y CSS Grid.",
+      "image": "ruta-norte-bicis",
+      "imageAlt": "Portada de Ruta Norte Bicis: cuatro tarjetas de tipos de bicicleta y la sección de novedades."
+    },
+    {
+      "id": "julio-travel",
+      "repo": "francoismaelraguza/DIW",
+      "path": "Unidad 2/Tarea5/Tarea_2-5_WebFlexbox",
+      "title": "Julio Travel",
+      "kind": "Flexbox",
+      "description": "Página de una agencia de viajes con escapadas, ofertas y destinos, resuelta solo con Flexbox e ilustraciones SVG.",
+      "image": "julio-travel",
+      "imageAlt": "Portada de Julio Travel: cabecera «Reserva ya tu viaje» y tarjetas de escapadas con precio."
+    },
+    {
+      "id": "proyecto-pokemon",
+      "repo": "francoismaelraguza/FrancoRaguza_DWES_proyecto",
+      "title": "Proyecto Pokémon",
+      "kind": "Spring Boot y Thymeleaf",
+      "description": "Aplicación web con Spring Boot y Thymeleaf: un formulario de entrenador con validación, una Pokédex leída de un JSON y la ficha de cada Pokémon. Proyecto de fan con fines educativos.",
+      "image": "proyecto-pokemon",
+      "imageAlt": "Pokédex del proyecto: tarjetas de Charizard y Venusaur con su número y sus tipos."
+    },
+    {
+      "id": "este-portfolio",
+      "repo": "francoismaelraguza/PortafolioWeb",
+      "title": "Este portafolio",
+      "kind": "React y Three.js",
+      "description": "El sitio que estás viendo: React, una escena de partículas en Three.js y un script que trae estos datos de GitHub en cada despliegue.",
+      "image": "este-portfolio",
+      "imageAlt": "Inicio de este portafolio: el nombre Franco Raguza junto al monograma FR hecho de partículas."
+    }
+  ]
+}

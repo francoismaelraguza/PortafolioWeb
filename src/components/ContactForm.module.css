@@ -1,0 +1,87 @@
+.form {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* Cada campo es un bloque relleno, un escalón más claro que el cupón. */
+.field {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  cursor: text;
+}
+
+.field:focus-within {
+  outline: 3px solid var(--accent);
+  outline-offset: 0;
+}
+
+.field[data-invalid] {
+  outline: 3px solid var(--error);
+  outline-offset: 0;
+}
+
+.label {
+  font-size: var(--step-small);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.input {
+  width: 100%;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: var(--step-body);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* El foco lo dibuja el bloque entero (focus-within). */
+.input:focus-visible {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--muted);
+  opacity: 0.75;
+}
+
+.error {
+  font-size: var(--step-small);
+  font-weight: 600;
+  color: var(--error);
+}
+
+.demo {
+  font-size: var(--step-small);
+  color: var(--muted);
+}
+
+.trap {
+  position: absolute;
+  left: -200vw;
+  width: 1px;
+  height: 1px; /* taste-skill-ignore: campo trampa oculto, no es una línea */
+  opacity: 0;
+}
+
+.done {
+  display: grid;
+  gap: var(--space-6);
+  justify-items: start;
+  align-content: center;
+  min-height: 100%;
+}
+
+.done:focus-visible {
+  outline-offset: var(--space-4);
+}
+
+.doneTitle {
+  font-size: var(--step-head);
+}
