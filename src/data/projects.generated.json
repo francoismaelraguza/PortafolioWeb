@@ -51,25 +51,33 @@
       "url": "https://github.com/francoismaelraguza/DIW/tree/main/Unidad%202/Tarea5/Tarea_2-5_WebFlexbox"
     },
     {
-      "id": "gestor-incidencias",
-      "repo": "francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza",
-      "title": "Gestor de incidencias",
-      "description": "Aplicación Java de consola para consultar las incidencias de soporte de un centro, con Maven y documentación Javadoc.",
-      "kind": "Java y Maven",
-      "image": "gestor-incidencias",
-      "imageAlt": "Javadoc de la clase GestorIncidencias, con sus métodos listar, buscar y buscarPorId.",
+      "id": "proyecto-pokemon",
+      "repo": "francoismaelraguza/FrancoRaguza_DWES_proyecto",
+      "title": "Proyecto Pokémon",
+      "description": "Aplicación web con Spring Boot y Thymeleaf: un formulario de entrenador con validación, una Pokédex leída de un JSON y la ficha de cada Pokémon. Proyecto de fan con fines educativos.",
+      "kind": "Spring Boot y Thymeleaf",
+      "image": "proyecto-pokemon",
+      "imageAlt": "Pokédex del proyecto: tarjetas de Charizard y Venusaur con su número y sus tipos.",
       "demo": null,
       "languages": [
         {
+          "name": "CSS",
+          "share": 40
+        },
+        {
           "name": "Java",
-          "share": 100
+          "share": 35
+        },
+        {
+          "name": "HTML",
+          "share": 25
         }
       ],
       "topics": [],
-      "stars": 0,
+      "stars": 1,
       "year": 2026,
-      "updatedAt": "2026-10-21T16:51:03Z",
-      "url": "https://github.com/francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza"
+      "updatedAt": "2026-10-25T14:43:47Z",
+      "url": "https://github.com/francoismaelraguza/FrancoRaguza_DWES_proyecto"
     },
     {
       "id": "este-portfolio",

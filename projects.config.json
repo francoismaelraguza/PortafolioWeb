@@ -22,13 +22,13 @@
       "imageAlt": "Portada de Julio Travel: cabecera «Reserva ya tu viaje» y tarjetas de escapadas con precio."
     },
     {
-      "id": "gestor-incidencias",
-      "repo": "francoismaelraguza/documentacion-proyecto-ud1-Franco-Raguza",
-      "title": "Gestor de incidencias",
-      "kind": "Java y Maven",
-      "description": "Aplicación Java de consola para consultar las incidencias de soporte de un centro, con Maven y documentación Javadoc.",
-      "image": "gestor-incidencias",
-      "imageAlt": "Javadoc de la clase GestorIncidencias, con sus métodos listar, buscar y buscarPorId."
+      "id": "proyecto-pokemon",
+      "repo": "francoismaelraguza/FrancoRaguza_DWES_proyecto",
+      "title": "Proyecto Pokémon",
+      "kind": "Spring Boot y Thymeleaf",
+      "description": "Aplicación web con Spring Boot y Thymeleaf: un formulario de entrenador con validación, una Pokédex leída de un JSON y la ficha de cada Pokémon. Proyecto de fan con fines educativos.",
+      "image": "proyecto-pokemon",
+      "imageAlt": "Pokédex del proyecto: tarjetas de Charizard y Venusaur con su número y sus tipos."
     },
     {
       "id": "este-portfolio",
